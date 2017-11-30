@@ -22,8 +22,8 @@ public class SelectionSort {
 
 	public static void invert(int[] a) {
 		int[] a2 = new int[a.length];
-		for (int i = a.length - 1; i >= 0; i--) {
-			a2[i] = a[a.length - i];
+		for (int i = 0; i < a.length; i++) {
+			a2[i] = a[a.length - 1 - i];
 		}
 		for (int i = 0; i < a.length; i++)
 			a[i] = a2[i];

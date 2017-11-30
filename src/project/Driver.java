@@ -14,7 +14,7 @@ public class Driver {
 		int n = 0;
 		for (int i = 0; i < arr.length; i++)
 			arr2[i] = -1;
-		for (int i = 0; i < arr.length;i++) {
+		for (int i = 0; i < arr.length; i++) {
 			if (!belongsTo(arr2, arr[i])) {
 				arr2[i] = arr[i];
 				if (arr2[i] >= 0)
@@ -22,8 +22,10 @@ public class Driver {
 			}
 		}
 		SelectionSort.sort(arr2, arr2.length);
-		output(arr2);
+		SelectionSort.invert(arr2);
+		// output(arr2);
 		int[][] arr3 = new int[n][2];
+		int j = 0;
 		for (int i = 0; i < n; i++) {
 			arr3[i][0] = arr2[i];
 			arr3[i][1] = findNumberOfOccurrences(arr, arr2[i]);
@@ -55,9 +57,9 @@ public class Driver {
 
 	public static void main(String[] args) {
 		int[] arr = { 1, 4, 2, 4, 5, 6, 4, 2, 3, 7 };
-		//output(arr);
+		// output(arr);
 		int[][] arrD = getDistinct(arr);
-		//output(arrD);
+		output(arrD);
 	}
 
 }
